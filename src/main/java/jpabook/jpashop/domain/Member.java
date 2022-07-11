@@ -23,6 +23,6 @@ public class Member {
     private Address address;
 
     @OneToMany(mappedBy = "member") // mapping 된 거울. 읽기 전용(?)
-    private List<Order> orders = new ArrayList<>();
+    private List<Order> orders = new ArrayList<>(); // 이 모양 변경하지 말 것
 
 }
