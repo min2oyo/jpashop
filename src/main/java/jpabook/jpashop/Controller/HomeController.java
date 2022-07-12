@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@Slf4j
+@Slf4j  // log 기록(?)
 public class HomeController {
 
     @RequestMapping("/")
