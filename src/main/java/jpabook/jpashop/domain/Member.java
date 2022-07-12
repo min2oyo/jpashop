@@ -17,7 +17,7 @@ public class Member {
     @Column(name = "number_id")
     private Long id;
 
-    private String username;
+    private String name;
 
     @Embedded   // 안전하게 두 군데 다 씀
     private Address address;
