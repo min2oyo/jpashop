@@ -1,0 +1,19 @@
+spring: # 스프링에서 별도 설정이 없으면 그냥 메모리에서 돌림. 그래서 여기가 다 비어도 됨
+#  datasource:
+#    url: jdbc:h2:mem:test # JVM에서 실행(?)
+#    username: sa
+#    password:
+#    driver-class-name: org.h2.Driver
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: create-drop # 테이블을 만들고 바로 지움
+#  properties:
+#    hibernate:
+#      # show_sql: true  # 로그를 찍음. 중복되어 생략
+#      format_sql: true
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace # 로그를 찍음

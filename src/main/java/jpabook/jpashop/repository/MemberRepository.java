@@ -17,7 +17,7 @@ public class MemberRepository {
 
     // 저장
     public void save(Member member) {
-        em.persist(member);
+        em.persist(member); // persist는 DB에 저장이 안 됨(?). commit 되어야 들어감(?)
 //        return member.getId();  // void가 아니라 Long일 떄 사용. 커맨드와 쿼리 분리(?)
     }
 
