@@ -13,7 +13,7 @@ import java.util.List;
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE) // JOINED: 정규화된 스타일.  SINGLE_TABLE: 한 테이블에 때려 박음
 @DiscriminatorColumn(name = "dtype")
 @Getter
-//@Setter   // 사용 안 함
+@Setter   // 사용 안 함
 public abstract class Item {
 
     @Id
@@ -37,8 +37,8 @@ public abstract class Item {
     }
 
     // stock 감소
-    public void removeStock(int quantity) {
-        int restStock = this.stockQuantity - quantity;
+    public void removeStock(int orderQuantity) {
+        int restStock = this.stockQuantity - orderQuantity;
         if (restStock < 0) {
             throw new NotEnoughStockException("need more stock");
         }
